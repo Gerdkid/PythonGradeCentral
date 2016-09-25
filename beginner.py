@@ -1,12 +1,10 @@
-from statistics import mean
+from statistics import mean as mean
 
-adminDict = {'Python': 'Pass123',
-                'user2': 'pass2'}
+adminDict = {'Python': 'Pass123', 'user2': 'pass2'}
 
-studentDict = {"Josh":[78,65,79,93],
-                'Steve':[90,12,79,60],
-                'John':[78,45,99,85]}
-
+studentDict = {"Josh": [78, 65, 79, 93],
+               'Steve': [90, 12, 79, 60],
+               'John': [78, 45, 99, 85]}
 
 
 def enterGrades():
@@ -14,13 +12,12 @@ def enterGrades():
     gradeToEnter = input('Grade: ')
 
     if studentName in studentDict:
-        print("Adding Grade....")
         studentDict[studentName].append(float(gradeToEnter))
+        print "Adding Grade...."
     else:
-        print('Student does not exist')
+        print 'Student does not exist'
 
-    print(studentDict)
-
+    print studentDict
 
 
 def addStudent():
@@ -32,8 +29,6 @@ def addStudent():
         studentDict[studentToAdd] = []
 
     print(studentDict)
-
-
 
 
 def removeStudent():
@@ -59,7 +54,6 @@ def averageStudentGrade():
         print(studentToAverage, 'has average grade of', avgGrade)
     else:
         print('Student does not exist')
-
 
 
 def main():
@@ -90,7 +84,7 @@ def main():
 
 
 login = input('Username: ')
-password = input ('Password: ')
+password = input('Password: ')
 
 if login in adminDict:
     if adminDict[login] == password:
